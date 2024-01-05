@@ -1,0 +1,12 @@
+<div class="container w-75">
+  <h1>All Boards</h1>
+
+  <%= render partial: 'board', locals: { boards: @boards, pagy: @pagy } %>
+
+  <div class='d-flex justify-content-between'>
+    <p><%== pagy_info(@pagy) %></p>
+    <%== pagy_bootstrap_nav(@pagy, items: 10) %>
+  </div>
+
+  <%= link_to "Back to Recent Boards", boards_path, class: "btn btn-secondary" %>
+</div>

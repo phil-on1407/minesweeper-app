@@ -1,0 +1,11 @@
+<div class="container w-75">
+  <h1 class="mb-4 text-center">Recent Boards</h1>
+
+  <%= render partial: 'board', locals: { boards: @boards } %>
+
+  <div class="mt-3">
+    <%= link_to "Show All Boards", all_path, class: "text-secondary" %>
+  </div>
+
+  <%= link_to "New Board", new_board_path, class: "btn btn-primary mt-3" %>
+</div>

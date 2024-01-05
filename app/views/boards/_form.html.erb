@@ -1,0 +1,40 @@
+<%= form_with(model: @board, local: true, html: { class: "form" }) do |form| %>
+  <% if @board.errors.any? %>
+    <div class="alert alert-danger">
+      <h4 class="alert-heading">Validation errors occurred:</h4>
+      <ul>
+        <% @board.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :email, class: "form-label" %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :width, class: "form-label" %>
+    <%= form.number_field :width, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :height, class: "form-label" %>
+    <%= form.number_field :height, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :mines, class: "form-label" %>
+    <%= form.number_field :mines, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <%= form.submit "Submit", class: "btn btn-primary" %>
+  <%= link_to "List Recent Boards", boards_path, class: "text-secondary lh-lg float-end" %>
+<% end %>

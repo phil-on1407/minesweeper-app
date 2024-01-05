@@ -1,0 +1,16 @@
+<div class='container' data-controller="minesweeper" data-minesweeper-height="<%= @board.height %>" data-minesweeper-width="<%= @board.width %>" data-minesweeper-mines="<%= @board.mines %>">
+  <h1><%= @board.name %></h1>
+  <p>Created by: <%= @board.email %></p>
+  
+  <p class="board-details fw-i">
+    Height: <%= @board.height %>;
+    Width: <%= @board.width %>;
+    Mines: <%= @board.mines %>
+  </p>
+  
+  <%= link_to "Back to Boards", boards_path, class: "text-secondary" %>
+
+  <div id="board" data-target="minesweeper.board"></div>
+
+  <button id='playAgainBtn' data-action="minesweeper#playAgain" style="display: none;" class='btn btn-primary mt-3'>Play Again</button>
+</div>
