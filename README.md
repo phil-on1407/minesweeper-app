@@ -1,4 +1,4 @@
-<img width="1296" alt="app22" src="https://github.com/phil-on1407/minesweeper-app/assets/78330800/eb4dce56-5db8-4bcf-9517-634abc5b260c"># General Information
+# General Information
 
 * Ruby version: 3.3.0
 * Rails version: 7.1.2
